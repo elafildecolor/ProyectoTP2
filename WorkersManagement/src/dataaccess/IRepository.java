@@ -12,9 +12,35 @@ package dataaccess;
  */
 public interface IRepository<T extends EntityBase>
 {
+
+    /**
+     *
+     * @param id
+     * @return
+     */
     T GetById(int id);
-    Iterable<T> List();
+
+    /**
+     *
+     * @return
+     */
+    Iterable<T> GetAll();
+
+    /**
+     *
+     * @param entity
+     */
     void Add(T entity);
+
+    /**
+     *
+     * @param entity
+     */
     void Delete(T entity);
+
+    /**
+     *
+     * @param entity
+     */
     void Edit(T entity);
 }

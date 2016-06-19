@@ -33,12 +33,6 @@ public class Repository<T extends EntityBase> implements IRepository<T>
     }
 
     @Override
-    public Iterable<T> List()
-    {
-        return entities;
-    }
-
-    @Override
     public void Add(T entity)
     {
         entities.add(entity);
@@ -52,6 +46,11 @@ public class Repository<T extends EntityBase> implements IRepository<T>
 
     @Override
     public void Edit(T entity) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Iterable<T> GetAll() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
